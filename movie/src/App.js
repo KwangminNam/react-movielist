@@ -1,11 +1,22 @@
-import Loading from "./Loading";
-import Movies from "./Movies";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+}from"react-router-dom";
+import Detail from "./components/Detail";
+import Home from "./components/Home";
+
 
 
 function App() {
- return(
-  <Movies></Movies>
- )
+  return (
+  <Router>
+    <Routes>
+      <Route path="/detail" element={<Detail/>}></Route>
+      <Route path="/" element={<Home/>}></Route>
+    </Routes>
+  </Router>
+  )
 }
 
 export default App;
